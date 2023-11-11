@@ -6,6 +6,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { AppContextProvider } from "./context/AppContext";
 
 function App() {
+  console.log(process.env.REACT_APP_API_URL)
+
   return (
     <Fragment>
       <AppContextProvider>

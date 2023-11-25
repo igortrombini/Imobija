@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import LogoImg from "../../assets/LogoImg.png";
 import { Container, Copy, ServicesContainer, Item, LogoAndPages } from "./styles";
+import { Link } from "react-router-dom";
+
 
 const Footer = () => {
   return (
@@ -42,13 +44,13 @@ const Footer = () => {
               <h3>Nossos Serviços</h3>
               <ul>
                 <li>
-                  <span>Comprar</span>
+                  <span><Link to="/comprar">Comprar</Link></span>
                 </li>
                 <li>
-                  <span>Alugar</span>
+                  <span><Link to="/alugar">Alugar</Link></span>
                 </li>
                 <li>
-                  <span>Vender</span>
+                  <span><Link to="/vender">Vender</Link></span>
                 </li>
               </ul>
             </Item>

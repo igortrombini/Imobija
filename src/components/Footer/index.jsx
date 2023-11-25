@@ -58,10 +58,10 @@ const Footer = () => {
               <h3>Institucional</h3>
               <ul>
                 <li>
-                  <span>Termos de Uso</span>
+                  <span><Link to="/termouso">Termo de Uso</Link></span>
                 </li>
                 <li>
-                  <span>Política de Privacidade</span>
+                  <span><Link to="/politicaprivacidade">Politica de Privacidade</Link></span>
                 </li>
                 <li>
                   <span>Política de Cookies</span>

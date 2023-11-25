@@ -14,6 +14,8 @@ import Login from "../pages/Login";
 import Comprar from "../pages/Comprar";
 import Alugar from "../pages/Alugar";
 import Vender from "../pages/Vender";
+import PoliticaPrivacidade from "../pages/PoliticaPrivacidade";
+import TermoUso from "../pages/TermoUso";
 import Cadastro from "../pages/Cadastro";
 import Perfil from "../pages/Perfil";
 import PrivateRoute from "../components/PrivateRoute";
@@ -31,6 +33,8 @@ const RouterApp = () => {
         <Route path="/comprar" component={Comprar} />
         <Route path="/alugar" component={Alugar} />
         <Route path="/vender" component={Vender} />
+        <Route path="/termouso" component={TermoUso} />
+        <Route path="/politicaprivacidade" component={PoliticaPrivacidade} />
         <Route path="/search-results" component={SearchCityResults} /> {/* Renderize o componente SearchCityResults diretamente */}
         <PrivateRoute path="/perfil" component={Perfil} />
         <Route path="*" component={Error} />

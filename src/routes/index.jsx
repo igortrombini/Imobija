@@ -19,6 +19,7 @@ import TermoUso from "../pages/TermoUso";
 import Cadastro from "../pages/Cadastro";
 import Perfil from "../pages/Perfil";
 import PrivateRoute from "../components/PrivateRoute";
+import PoliticaCookies from "../pages/PoliticaCookie";
 
 
 const RouterApp = () => {
@@ -35,7 +36,8 @@ const RouterApp = () => {
         <Route path="/vender" component={Vender} />
         <Route path="/termouso" component={TermoUso} />
         <Route path="/politicaprivacidade" component={PoliticaPrivacidade} />
-        <Route path="/search-results" component={SearchCityResults} /> {/* Renderize o componente SearchCityResults diretamente */}
+        <Route path="/politicacookie" component={PoliticaCookies} />
+        <Route path="/pesquisar-imoveis" component={SearchCityResults} />  {/* Renderize o componente SearchCityResults diretamente */}
         <PrivateRoute path="/perfil" component={Perfil} />
         <Route path="*" component={Error} />
       </Switch>

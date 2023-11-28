@@ -1,21 +1,22 @@
 import React from "react";
+import Card from "../Card"; 
 
 const SearchCityResults = ({ searchResult }) => {
   return (
     <div>
-      <h2>Resultados da Pesquisa</h2>
       {searchResult && searchResult.length > 0 ? (
         <div>
-          <p>Nome da Cidade: {searchResult[0].cidade}</p>
-          {/* Renderize a lista de imóveis encontrados */}
-          <ul>
-            {searchResult.map((imovel) => (
-              <li key={imovel.id}>
-                <p>Nome do Imóvel: {imovel.nome}</p>
-                {/* Adicione outros detalhes do imóvel conforme necessário */}
-              </li>
-            ))}
-          </ul>
+          <h2>Resultados da Pesquisa</h2>
+          {searchResult.map((imovel) => (
+            <Card
+              key={imovel.id}
+              thumb={imovel.thumb}
+              tipo={imovel.tipo}
+              endereco={imovel.endereco}
+              valor={imovel.valor}
+              slug={imovel.slug}
+            />
+          ))}
         </div>
       ) : (
         <p>Nenhum resultado encontrado.</p>

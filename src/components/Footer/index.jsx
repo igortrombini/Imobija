@@ -1,11 +1,33 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import LogoImg from "../../assets/LogoImg.png";
 import { Container, Copy, ServicesContainer, Item, LogoAndPages } from "./styles";
 import { Link } from "react-router-dom";
 
-
 const Footer = () => {
+  const [showScroll, setShowScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setShowScroll(true);
+      } else {
+        setShowScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
+  const handleLinkClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <Fragment>
       <Container>
@@ -16,7 +38,6 @@ const Footer = () => {
               <img src={LogoImg} alt="" />
 
               {/* Inclua aqui as páginas "Nosso Serviços" e "Institucional" */}
-
             </LogoAndPages>
 
             <nav>
@@ -44,13 +65,13 @@ const Footer = () => {
               <h3>Nossos Serviços</h3>
               <ul>
                 <li>
-                  <span><Link to="/comprar">Comprar</Link></span>
+                  <span onClick={handleLinkClick}><Link to="/comprar">Comprar</Link></span>
                 </li>
                 <li>
-                  <span><Link to="/alugar">Alugar</Link></span>
+                  <span onClick={handleLinkClick}><Link to="/alugar">Alugar</Link></span>
                 </li>
                 <li>
-                  <span><Link to="/vender">Vender</Link></span>
+                  <span onClick={handleLinkClick}><Link to="/vender">Vender</Link></span>
                 </li>
               </ul>
             </Item>
@@ -58,21 +79,21 @@ const Footer = () => {
               <h3>Institucional</h3>
               <ul>
                 <li>
-                  <span><Link to="/termouso">Termo de Uso</Link></span>
+                  <span onClick={handleLinkClick}><Link to="/termouso">Termo de Uso</Link></span>
                 </li>
                 <li>
-                  <span><Link to="/politicaprivacidade">Politica de Privacidade</Link></span>
+                  <span onClick={handleLinkClick}><Link to="/politicaprivacidade">Politica de Privacidade</Link></span>
                 </li>
                 <li>
-                  <span>Política de Cookies</span>
+                  <span onClick={handleLinkClick}><Link to="/politicacookie">Politica de Cookie</Link></span>
                 </li>
               </ul>
             </Item>
           </ServicesContainer>
         </div>
       </Container>
-      <Copy>
-        <p>© Copyright 2022 - Workside Tecnologia All Rights Reserved.</p>
+      <Copy showScroll={showScroll}>
+        <p>© Copyright 2023 - Workside Tecnologia All Rights Reserved.</p>
         <ul></ul>
       </Copy>
     </Fragment>

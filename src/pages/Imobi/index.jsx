@@ -82,7 +82,7 @@ const Imobi = () => {
       <Container>
         <Left>
           <Thumb>
-            <img src={`${urlApi}/uploads/${thumb}`} alt="" />
+            <img src={thumb} alt="" />
           </Thumb>
           <Description>
             <h2>{tipo}</h2>

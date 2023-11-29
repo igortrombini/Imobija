@@ -31,7 +31,7 @@ const Home = () => {
             tipo={items.tipo}
             endereco={items.endereco}
             valor={items.valor}
-            slug={items.slug}
+            id={items.id}
           />
         ))}
       </Wrapper>

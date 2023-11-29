@@ -3,7 +3,7 @@ import { urlApi } from "../../services/Api";
 import { Container, Text } from "./styles";
 
 const TopBanner = ({ tipo, descricao, thumb }) => {
-  const imgUrl = `${urlApi}/uploads/${thumb}`;
+  const imgUrl = {thumb};
   return (
     <Container style={{ backgroundImage: `url(${imgUrl})` }}>
       <Text>

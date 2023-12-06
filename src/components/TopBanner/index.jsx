@@ -1,9 +1,8 @@
 import React from "react";
-import { urlApi } from "../../services/Api";
 import { Container, Text } from "./styles";
 
 const TopBanner = ({ tipo, descricao, thumb }) => {
-  const imgUrl = {thumb};
+  const imgUrl = thumb;
   return (
     <Container style={{ backgroundImage: `url(${imgUrl})` }}>
       <Text>
@@ -11,7 +10,7 @@ const TopBanner = ({ tipo, descricao, thumb }) => {
         <p>{descricao}</p>
       </Text>
     </Container>
-  )
+  );
 }
 
 export default TopBanner;

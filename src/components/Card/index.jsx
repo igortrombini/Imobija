@@ -7,7 +7,7 @@ import {
   Img,
   Itens
 } from "./styles";
-import { urlApi } from "../../services/Api";
+
 
 const Card = ({ thumb, tipo, endereco, valor, id }) => {
   return (

@@ -13,8 +13,9 @@ export const Header = styled.div`
 
 export const Wrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  align-items: stretch;
   flex-wrap: wrap;
   padding: 25px 20px; /* Alterado o espaçamento lateral para 20px */
   

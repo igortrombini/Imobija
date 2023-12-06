@@ -16,10 +16,12 @@ export const Container = styled.div`
 `;
 
 export const Img = styled.div`
+    height: 50%;
     width: 100%;
     img {
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover;
     }
 `;
 

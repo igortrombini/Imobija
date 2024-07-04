@@ -24,7 +24,8 @@
 2. Instale as dependências utilizando `npm install`.
 3. Execute o aplicativo com `npm start`.
 4. O site estará disponível em seu navegador no endereço http://localhost:3000/.
-OBS: Ele é dependente da API para toda as FUNÇOES DE CRUD
+OBS: Ele é dependente da API para toda as FUNÇOES DE CRUD(https://github.com/igortrombini/srv)
+
 
 ## Tecnologias Utilizadas
 
